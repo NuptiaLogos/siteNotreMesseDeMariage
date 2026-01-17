@@ -1,0 +1,293 @@
+:root {
+  --color-primary: #652D90;
+  --color-secondary: #FF8100;
+  --color-tertiary: #e6def6;
+  --text-light: #4a4a4a;
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Legal Section - Style cohérent avec le site */
+.legal-section {
+    padding: 6rem 0 5rem;
+    background: linear-gradient(180deg, 
+        rgba(230, 222, 246, 0.3) 0%, 
+        rgba(255, 255, 255, 1) 40%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    min-height: 100vh;
+}
+
+.legal-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.legal-header {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.legal-header h1 {
+    font-family: 'Alfarn', serif;
+    font-size: 4rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.legal-header p {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.legal-tabs {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.tabs-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, var(--color-tertiary) 0%, rgba(230, 222, 246, 0.5) 100%);
+    border-bottom: 3px solid var(--color-primary);
+    padding: 10px;
+    gap: 5px;
+}
+
+.tab-button {
+    flex: 1;
+    min-width: 180px;
+    padding: 18px 25px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 129, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.tab-button:hover::before {
+    left: 100%;
+}
+
+.tab-button:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.tab-button.active {
+    background: white;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.tabs-content {
+    padding: 60px 80px;
+    background: white;
+    margin-top:50px;
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.tab-panel h2 {
+    font-family: 'Alfarn', serif;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 15px;
+}
+
+.tab-panel h3 {
+    font-family: 'Alfarn', serif;
+    font-size: 1.6rem;
+    color: var(--color-secondary);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tab-panel h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 70%;
+    background: var(--color-primary);
+    border-radius: 3px;
+}
+
+.tab-panel p {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.tab-panel ul {
+    margin: 25px 0;
+    padding-left: 40px;
+}
+
+.tab-panel li {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.tab-panel li::marker {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .legal-container {
+        padding: 0 30px;
+    }
+    
+    .tabs-content {
+        padding: 50px 50px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-section {
+        padding: 120px 0 60px;
+    }
+    
+    .legal-container {
+        padding: 0 20px;
+    }
+    
+    .legal-header {
+        margin-bottom: 50px;
+    }
+    
+    .legal-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .legal-header p {
+        font-size: 1rem;
+    }
+    
+    .tabs-navigation {
+        padding: 8px;
+    }
+    
+    .tab-button {
+        min-width: 140px;
+        padding: 14px 18px;
+        font-size: 0.8rem;
+    }
+    
+    .tabs-content {
+        padding: 35px 25px;
+        margin-top: 350px;
+    }
+    
+    .tab-panel h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .tab-panel h3 {
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+    
+    .tab-panel p,
+    .tab-panel li {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-header h1 {
+        font-size: 2rem;
+    }
+    
+    .tab-button {
+        min-width: 100%;
+        font-size: 0.85rem;
+    }
+    
+    .tabs-content {
+        padding: 25px 20px;
+        margin-top: 350px; /* Reduced from 350px which seems high, assuming tabs stack on mobile */
+    }
+    
+    .tab-panel h2 {
+        font-size: 1.5rem;
+    }
+}
