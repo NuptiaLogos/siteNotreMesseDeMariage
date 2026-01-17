@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Download Site</title>
+</head>
+<body>
+    <script>
+        // Script pour télécharger le site depuis GitHub
+        const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
+        
+        async function downloadFile(path) {
+            try {
+                const response = await fetch(`${GITHUB_RAW}/${path}`);
+                const text = await response.text();
+                return text;
+            } catch (error) {
+                console.error(`Erreur pour ${path}:`, error);
+                return null;
+            }
+        }
+        
+        async function downloadSite() {
+            console.log('Téléchargement du site...');
+            
+            const files = {
+                html: await downloadFile('index.html'),
+                css: await downloadFile('styles.css'),
+                responsive: await downloadFile('responsive.css'),
+                js: await downloadFile('animations.js')
+            };
+            
+            console.log('Fichiers téléchargés:', files);
+            
+            // Afficher dans la console pour copier
+            window.siteContent = files;
+        }
+        
+        downloadSite();
+    </script>
+</body>
+</html>

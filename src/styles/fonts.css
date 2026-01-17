@@ -1,0 +1,33 @@
+/* Alfarn - Police titres du site original */
+@font-face {
+  font-family: 'Alfarn';
+  src: url('https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main/fonts/Alfarn-2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Avenir LT Pro - Police textes du site original */
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main/fonts/AvenirLTProBook.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main/fonts/AvenirLTProMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main/fonts/AvenirLTProHeavy.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
