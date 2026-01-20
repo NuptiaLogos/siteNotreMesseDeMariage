@@ -471,7 +471,7 @@ export default function Home() {
                   { text: 'Répertoire perso', free: true },
                   { text: 'PDF partitions', free: true },
                   { text: 'Planning pro', free: false },
-                  { text: 'Import partitions', free: false }
+                  { text: 'Réduction tarif mariages', free: false }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10 hover:border-[#FF8100]/30 transition">
                     <Check className={`w-5 h-5 flex-shrink-0 ${item.free ? 'text-green-400' : 'text-[#FF8100]'}`} />
